@@ -6,4 +6,4 @@ if [ "$(id -u)" != "0" ]; then
 	profile_path="/home/user/.mozilla/firefox/default/"
 fi
 
-su user --command `exec /usr/bin/firefox --no-remote --profile "${profile_path}" --kiosk "$@"`
+exec /usr/bin/firefox --no-remote --profile "${profile_path}" --kiosk "$@"
